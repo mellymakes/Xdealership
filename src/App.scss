@@ -2,3 +2,29 @@
     width: 90%;
     margin: 0 auto;
 }
+
+
+@mixin grid-center {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin absolute-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin relative-center {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin grid($templatee) {
+    display: grid;
+    grid-template-column: $templatee
+}

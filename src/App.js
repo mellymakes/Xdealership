@@ -2,6 +2,7 @@ import React from 'react'
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import {Nav, Home, Order, About, FAQ, Footer} from './all'
 import {stylishDesign} from './imgs'
+import './App.scss'
   
 class App extends React.Component{
 
