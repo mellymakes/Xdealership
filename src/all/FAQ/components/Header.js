@@ -1,9 +1,10 @@
 import React from 'react'
+import './scss/header.scss'
 
 export default function Header() {
     return (
-        <div>
-            <h1>Header</h1>
+        <div className="faq-header">
+           <h1>FREQUENTLY ASKED<br/> QUESTIONS</h1>
         </div>
     )
 }

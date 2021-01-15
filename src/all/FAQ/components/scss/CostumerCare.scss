@@ -1,0 +1,66 @@
+@import '../../../../App.scss';
+
+.ccare-title {
+  margin: 70px 0;
+  text-align: center;
+}
+
+.ccare-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-gap: 30px;
+}
+
+.ccbox {
+  text-align: center;
+  background-color: $wht;
+  height: 300px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  border-radius: 15px;
+  cursor: pointer;
+
+  @include box-shadow;
+
+  .ccbox-img {
+    position: relative;
+    svg {
+      @include absolute-center;
+      width: 50px;
+      fill: $wht;
+      z-index: 4;
+    }
+    &::after {
+      content: '';
+      width: 100px;
+      height: 100px;
+      background-color: black;
+      position: absolute;
+      display: block;
+      border-radius: 50%;
+      z-index: 3;
+      @include absolute-center;
+    }
+
+    // .ccbox-img-box {
+
+    // }
+    .test-img {
+      display: none;
+    }
+  }
+
+  .ccbox-title {
+    font-size: 20px;
+  }
+  &:hover {
+    background-color: #e4e4e4;
+  }
+}
+
+@media (max-width: 300px) {
+  .ccare-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}

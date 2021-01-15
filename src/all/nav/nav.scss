@@ -1,0 +1,212 @@
+@import '../../vars';
+@import '../../App.scss';
+
+.nav {
+  background-color: $pblue;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  background: $pblue;
+
+  .nav-in {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .nav-logo {
+    @include grid-center;
+    justify-content: left;
+    img {
+      width: 100px;
+    }
+  }
+  .nav-list {
+    display: none;
+  }
+  .nav-soscm {
+    @include grid-center;
+    justify-content: right;
+
+    ul {
+      display: none;
+    }
+    img {
+      width: 20px;
+    }
+  }
+}
+
+.nav-dropdown {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: -130%;
+  background-color: $dblue;
+  transition: 500ms all;
+  z-index: 99;
+
+  .navlinks {
+    @include new-ul;
+    grid-template-columns: 1fr;
+
+    a {
+      @include grid-center;
+      padding: 2rem;
+      //   background-color: $pred;
+    }
+  }
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .sdropdown {
+    // @include grid-center;
+
+    ul {
+      @include new-ul;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+
+      width: 100%;
+
+      li {
+        @include grid-center;
+        padding: 20px;
+        font-size: 20px;
+        color: $wht;
+        transition: 400ms all;
+        &:active {
+          background-color: $pblue;
+        }
+      }
+    }
+  }
+}
+
+.active-dropdown-nav {
+  background-color: $pblue;
+}
+
+.active-dropdown {
+  top: 35px;
+}
+
+.active-dropdown-link {
+  background-color: $pred;
+}
+
+@media (min-width: 500px) {
+  .nav {
+    padding: 20px;
+  }
+  .active-dropdown {
+    top: 76px;
+  }
+}
+
+@media (min-width: 900px) {
+  .nav-dropdown {
+    display: none;
+  }
+  .nav {
+    padding: 10px;
+    .nav-list {
+      @include grid-center;
+      display: grid;
+      ul {
+        @include new-ul;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+
+        a {
+          // color: $wht;
+          text-decoration: none;
+          padding: 10px 20px;
+        }
+      }
+    }
+
+    .nav-soscm {
+      @include grid-center;
+      ul {
+        // padding: 20px;
+        @include new-ul;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        width: 100%;
+
+        li {
+          position: relative;
+          padding: 20px;
+          font-size: 20px;
+          color: #fff;
+          cursor: pointer;
+
+          svg {
+            position: relative;
+            z-index: 2;
+          }
+          .icon {
+            // @include absolute-center;
+
+            position: absolute;
+            top: 50%;
+            left: 49%;
+            transform: translate(-50%, -50%);
+
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            position: absolute;
+            border: 2px solid white;
+          }
+          .st {
+            position: absolute;
+            top: 50%;
+            left: 45%;
+          }
+          &:hover {
+            color: #000;
+          }
+          &:hover .icon {
+            background-color: $wht;
+          }
+        }
+      }
+      img {
+        display: none;
+      }
+    }
+
+    .nav-in {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+  .cool-nav-animation {
+    color: $wht;
+    transition: 400ms all;
+
+    &::after {
+      content: '';
+      background-color: $pred;
+      width: 0%;
+      height: 2px;
+      transition: 400ms all;
+      margin-top: 3px;
+      display: block;
+    }
+  }
+
+  .cool-nav-animation-active {
+    font-weight: bold;
+    color: $pred;
+
+    &::after {
+      width: 100%;
+    }
+  }
+}

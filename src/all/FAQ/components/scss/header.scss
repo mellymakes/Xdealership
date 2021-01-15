@@ -1,0 +1,25 @@
+@import '../../../../App.scss';
+
+.faq-header {
+  background-color: $pblue;
+  height: 70vh;
+
+  h1 {
+    font-size: 70px;
+    text-align: center;
+    color: $wht;
+    position: relative;
+    top: 40%;
+  }
+}
+
+@media (max-width: 800px) {
+  .faq-header h1 {
+    font-size: 50px;
+  }
+}
+@media (max-width: 600px) {
+  .faq-header h1 {
+    font-size: 30px;
+  }
+}

@@ -1,0 +1,53 @@
+@import '../../../../App.scss';
+
+.fq {
+  margin-top: 120px;
+}
+
+.faqs {
+  margin-bottom: 200px;
+}
+
+.qcard-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 35px;
+}
+
+.qcard {
+  height: 80px;
+  width: 100%;
+  background-color: $wht;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: all 300ms;
+
+  .front,
+  .back {
+    padding: 20px;
+    position: absolute;
+    left: 0px;
+    backface-visibility: hidden;
+    width: 100%;
+    height: 100%;
+    @include box-shadow;
+  }
+  .front p,
+  .back p {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .front {
+    background-color: $wht;
+  }
+  .back {
+    background-color: $wht;
+    transform: rotateX(180deg);
+  }
+
+  &:hover {
+    transform: translateY(100px);
+    transform: rotateX(180deg);
+  }
+}

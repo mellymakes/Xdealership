@@ -1,9 +1,14 @@
 import React from 'react'
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import {Nav, Home, Order, About, FAQ, Footer} from './all'
-import {stylishDesign} from './imgs'
+// import {stylishDesign} from './imgs'
+import { library } from "@fortawesome/fontawesome-svg-core";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { fab } from "@fortawesome/free-brands-svg-icons";
 import './App.scss'
   
+library.add(fab)
+
 class App extends React.Component{
 
     
@@ -13,8 +18,8 @@ class App extends React.Component{
 
         return (
             <div className="all-mat">
-                <Nav />
                 <Router>
+                <Nav />
 
 
                 <Switch>
@@ -26,8 +31,8 @@ class App extends React.Component{
                 </Switch>
 
 
-                </Router>
                 <Footer />
+                </Router>
             </div>
         )
     }

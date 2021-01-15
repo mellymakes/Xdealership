@@ -1,0 +1,144 @@
+@import '../../../../vars';
+@import '../../../../App.scss';
+
+.header {
+  width: 100%;
+  background-color: $pblue;
+  height: 100vh;
+  max-height: 1080px;
+  color: $wht;
+  img {
+    width: 250px;
+  }
+  position: relative;
+}
+.redcirc {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  top: 9%;
+}
+.header-in {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: 'img' 'text';
+  position: relative;
+  top: 30%;
+}
+
+.header-texts {
+  margin-top: 160px;
+  grid-area: text;
+  text-align: center;
+  line-height: 1rem;
+  h1 {
+    line-height: 2rem;
+  }
+  .f {
+    color: red;
+  }
+
+  p {
+    margin: 1.5rem;
+    font-size: 11px;
+  }
+
+  button {
+    padding: 10px 20px;
+    background-color: $pred;
+    border: none;
+    font-weight: 600;
+    color: $wht;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    &:active {
+      background-color: $dred;
+    }
+  }
+}
+.header-img {
+  grid-area: img;
+  //   position: relative;
+
+  img {
+    position: relative;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@media (min-width: 600px) {
+  .header img {
+    width: 300px;
+  }
+  .header-texts {
+    h1 {
+      font-size: 40px;
+    }
+    h3 {
+      font-size: 20px;
+      margin: 10px 0;
+    }
+    p {
+      font-size: 15px;
+    }
+  }
+}
+
+@media (min-width: 900px) {
+  .header {
+    padding-top: 40px;
+    .redcirc {
+      top: 55%;
+      transform: translateY(-50%);
+      width: 500px;
+      left: 50%;
+    }
+    img {
+      width: 400px;
+    }
+  }
+  .header-in {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 'text img';
+    height: 100%;
+  }
+
+  .header-texts {
+    text-align: left;
+
+    p {
+      margin-left: 0;
+    }
+  }
+
+  .header-img {
+    img {
+      width: 500px;
+      @include relative-center;
+      top: 300px;
+    }
+  }
+}
+
+@media (min-width: 1000px) {
+  .header-texts {
+    h1 {
+      font-size: 60px;
+    }
+    h3 {
+      font-size: 30px;
+      margin: 25px 0;
+    }
+
+    button {
+      padding: 15px 25px;
+      font-size: 17px;
+    }
+  }
+}

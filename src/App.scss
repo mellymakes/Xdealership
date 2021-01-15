@@ -1,30 +1,110 @@
-.con-90-res{
-    width: 90%;
-    margin: 0 auto;
+@import './vars';
+* {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  box-sizing: border-box;
+  // background-color: $lgray;
+}
+body {
+  background-color: $lgray;
 }
 
+.con-90-res {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1300px;
+}
+
+@mixin new-ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
 
 @mixin grid-center {
-    display: grid;
-    justify-content: center;
-    align-items: center;
+  display: grid;
+  justify-content: center;
+  align-items: center;
 }
 
 @mixin absolute-center {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 @mixin relative-center {
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 @mixin grid($templatee) {
-    display: grid;
-    grid-template-column: $templatee
+  display: grid;
+  grid-template-column: $templatee;
+}
+
+@mixin box-shadow {
+  -webkit-box-shadow: 4px 4px 6px 0px rgba(50, 50, 50, 0.34);
+  -moz-box-shadow: 4px 4px 6px 0px rgba(50, 50, 50, 0.34);
+  box-shadow: 4px 4px 6px 0px rgba(50, 50, 50, 0.34);
+}
+
+// @media (max-width: 400px) {
+//   .con-90-res {
+//     width: 90%;
+//     margin: 0 auto;
+//   }
+// }
+
+.top-facingdown {
+  position: relative;
+  top: -10px;
+  pointer-events: none;
+  width: 100%;
+}
+.top-facingup {
+  position: relative;
+  top: -30px;
+  pointer-events: none;
+  width: 100%;
+  transform: rotate(180deg);
+}
+
+@media (min-width: 400px) {
+  .top-facingup {
+    top: -50px;
+  }
+}
+@media (min-width: 400px) {
+  .top-facingup {
+    top: -50px;
+  }
+}
+@media (min-width: 500px) {
+  .top-facingup {
+    top: -70px;
+  }
+}
+@media (min-width: 800px) {
+  .top-facingup {
+    top: -100px;
+  }
+}
+@media (min-width: 1000px) {
+  .top-facingup {
+    top: -120px;
+  }
+}
+@media (min-width: 1000px) {
+  .top-facingup {
+    top: -120px;
+  }
+}
+@media (min-width: 1300px) {
+  .top-facingup {
+    top: -170px;
+  }
 }

@@ -1,0 +1,57 @@
+@import '../../../../App.scss';
+
+.quality-title {
+  text-align: center;
+  font-size: 50px;
+  margin: 100px 0;
+  margin-bottom: 50px;
+}
+
+.quality-p {
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.6em;
+  margin: 60px 0;
+}
+
+.quality-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 40px;
+}
+
+.qbox {
+  text-align: center;
+  padding: 20px;
+  background-color: $wht;
+  -webkit-box-shadow: 4px 4px 6px 0px rgba(50, 50, 50, 0.34);
+  -moz-box-shadow: 4px 4px 6px 0px rgba(50, 50, 50, 0.34);
+  box-shadow: 4px 4px 6px 0px rgba(50, 50, 50, 0.34);
+
+  .qbox-img img {
+    width: 100px;
+  }
+
+  .qbox-title {
+    margin: 20px 0;
+  }
+
+  .qbox-desc {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .quality-grid {
+    grid-template-columns: 2fr;
+  }
+}
+
+@media (max-width: 330px) {
+  .quality-title {
+    font-size: 30px;
+  }
+  .quality-p {
+    font-size: 15px;
+  }
+}

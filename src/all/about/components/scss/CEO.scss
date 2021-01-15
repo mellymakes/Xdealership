@@ -1,0 +1,134 @@
+@import '../../../../App.scss';
+// @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,900&display=swap');
+.about-ceo {
+  padding-bottom: 30px;
+}
+.about-ceo-title {
+  margin: 30px 0;
+  text-align: center;
+  font-weight: 900;
+}
+
+.abox {
+  display: grid;
+  grid-template-areas: 'img' 'text';
+  grid-template-columns: 1fr;
+  padding: 30px 20px;
+  font-size: 11px;
+  background-color: $pblue;
+  color: $wht;
+  border: none;
+  -webkit-box-shadow: 4px 4px 6px 0px rgba(50, 50, 50, 0.34);
+  -moz-box-shadow: 4px 4px 6px 0px rgba(50, 50, 50, 0.34);
+  box-shadow: 4px 4px 6px 0px rgba(50, 50, 50, 0.34);
+  border-radius: 15px;
+  position: relative;
+  //   font-weight: lighter;
+
+  .abox-texts {
+    grid-area: text;
+    text-align: justify;
+    line-height: 1.3rem;
+  }
+  .abox-img {
+    grid-area: img;
+    margin-bottom: 20px;
+    position: relative;
+    height: 150px;
+
+    .abox-img-box {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 200px;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (min-width: 350px) {
+  .abox {
+    .abox-img {
+      margin-bottom: 70px;
+
+      .abox-img-box {
+        width: 300px;
+      }
+    }
+  }
+}
+@media (min-width: 530px) {
+  .abox {
+    .abox-texts {
+      font-size: 15px;
+    }
+    .abox-img {
+      margin-bottom: 140px;
+
+      .abox-img-box {
+        width: 400px;
+      }
+    }
+  }
+}
+@media (min-width: 900px) {
+  .abox {
+    grid-template-areas: 'text img';
+    grid-template-columns: 4fr 2fr;
+    padding: 50px;
+    // height: 0px;
+
+    .abox-texts {
+      // padding: 20px;
+      padding-right: 40px;
+      line-height: 1.6rem;
+      position: absolute;
+
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .abox-img {
+      margin-bottom: 40px;
+      position: relative;
+
+      .abox-img-box {
+        width: 300px;
+        position: absolute;
+        top: -10%;
+        transform: translateX(-50%);
+        border-radius: 15px;
+        overflow: hidden;
+      }
+    }
+  }
+}
+
+@media (min-width: 1100px) {
+  .abox {
+    height: 450px;
+    .abox-texts {
+      font-size: 22px;
+      text-align: center;
+    }
+    .abox-img {
+      .abox-img-box {
+        top: 30%;
+        width: 360px;
+        // display: none;
+      }
+    }
+  }
+}
+@media (min-width: 1200px) {
+  .abox {
+    .abox-img {
+      .abox-img-box {
+        top: 30%;
+        width: 400px;
+      }
+    }
+  }
+}

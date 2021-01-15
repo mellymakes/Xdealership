@@ -1,0 +1,32 @@
+@import '../../../../App.scss';
+.wannabuy {
+  background-color: $pblue;
+  color: $wht;
+  text-align: center;
+  margin-top: 50px;
+
+  img {
+    pointer-events: none;
+  }
+
+  h1 {
+    margin: 60px 0;
+  }
+  button {
+    margin-bottom: 60px;
+    padding: 1rem 2rem;
+    color: $wht;
+    background-color: $pred;
+    border: none;
+    border-radius: 5px;
+    font: 20px;
+  }
+}
+
+@media (max-width: 400px) {
+  .wannabuy {
+    h1 {
+      font-size: 23px;
+    }
+  }
+}
