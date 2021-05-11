@@ -79,7 +79,7 @@ function SmallBox({TITLE, YEAR, IMG, PRICE}) {
 
 export default function CarsList() {
 
-    const [ORDERdATA, SEToRDERdATA] = useState(oRDERdATA)
+    const [ORDERdATA] = useState(oRDERdATA)
 
     const [width, setWidth] = useState(window.innerWidth)
     
