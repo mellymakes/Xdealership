@@ -48,7 +48,7 @@ export default function Nav() {
                                         <li><p>About</p></li>
                                    </NavLink>
                                    <NavLink to="/FAQ"className="cool-nav-animation" activeClassName="cool-nav-animation-active">
-                                        <li><p>FA</p></li>
+                                        <li><p>FAQ</p></li>
                                    </NavLink>
                               </ul>
                          </div>
