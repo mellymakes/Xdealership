@@ -75,7 +75,7 @@ export default function Nav() {
                                         <li><p>About</p></li>
                                    </NavLink>
                                    <NavLink to="/FAQ"className="cool-nav-animation" activeClassName="active-dropdown-link">
-                                        <li><p>FA</p></li>
+                                        <li><p>FAqqq</p></li>
                                    </NavLink>
            </ul>
                          <div className="sdropdown">
